@@ -5,7 +5,7 @@ using Pathfinding;
 using UnityEngine;
 
 [RequireComponent(typeof(Spider))]
-public class SpiderAIPath : AIPath
+public class SpiderAIPath : AILerp
 {
     #region Attribute
     private Action<Spider> onDestinationReached = null;
@@ -32,17 +32,12 @@ public class SpiderAIPath : AIPath
         }
         
         onDestinationReached?.Invoke(spider);
+        onDestinationReached = null;
     }
 
     public void AddMethod(Action<Spider> method)
     {
         onDestinationReached += method;
-    }
-
-    protected override void OnDisable()
-    {
-        base.OnDisable();
-        onDestinationReached = null;
     }
 
     #endregion

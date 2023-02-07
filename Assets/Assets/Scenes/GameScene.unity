@@ -244,7 +244,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 7.8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -379,6 +379,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 169152934, guid: c3c61c6ce08b8ed4d84804b0109de43e, type: 3}
+      propertyPath: data.dataString
+      value: UEsDBBQAAAgIAAA4IeyNzmd1YQIAABYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMziVjJxhKby1f6SEJE9LJxRchr7EGWfLoI0Ay/PdqZRsbOj1h3nu7+/bD/iJcmgqYVXqlefakMiA/BgSfybdBRz7Cke6U3PBPaDXvPLMFimjQvFLLlcdjDDOqBKs5+yl3AsWRB53kudLlItvBTBlrPJxTYcBTWlmMlh76GpCj/xlOMeTUhH7i7+DsnxhIC7rTxQ93SSP8fiV0kglaVpCh5U5/P2nU8TjIpG+mUaBxpoTgpnFC7KkKnb7SE/aZceq7CtVRWwDfFRZz9gNf8tyAbXxreppz7YdTZyS/VD2xkpp97emDCoc17oObOuXTP+wwDnSuVfnYVo0jrGALzvbeH6PG9gbah+fXtp08ULGnWwHvBchntdLKycyTVjsMdQbu593fS2OzAti+w2urN6Crukm3+0vupuNoNE4Ww6jdELZzDmM4zgQvt6i+G9XARqgw9LB/0H49v733cB2myepRNPTHwBvd9c+oIZZcG+uppmGJTrfKaZSSpX/AFTBnZ0pL0P0EFUgq7Gnt09jbXd5w/49aUnxhmuIN174HNyEB7vRRdEOt1eGyN1OowxOY4sVZwSV0Q0fi2c9ppqSsT81ckxi1cTqnrBe1czy7PjIyYUkeR9l0MmXbPAI6pMlk9DAaP0Rxsp2ORgkJV8ilb5OKde2zmY5fmuySS39x7WdksNK0ClefaXpY8c9S9fxxmasN0wDypc7QTsiA9kX8m5ktMu7nswFruQzrJl8pEYrtIUsvidLQ6eJoNU27LCmp+IeyiKRkFj4dKUH4ctVrDR8cDli8TXYm579QSwMEFAAACAgAADgh7OE4RO1tAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTXUVBKL0osyCgGihiCOKWZKSB2tJJ5smmaoUGKpbllclKaQWqibqKpuYmxiZmxgaFpkqWJialSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAADgh7I3OZ3VhAgAAFgUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAADgh7OE4RO1tAAAAeAAAAAkAJAAAAAAAAAAAAAAArgIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABmAwAAAAA=
+      objectReference: {fileID: 0}
     - target: {fileID: 7800203533462560225, guid: c3c61c6ce08b8ed4d84804b0109de43e, type: 3}
       propertyPath: m_RootOrder
       value: 1

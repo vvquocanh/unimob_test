@@ -35,7 +35,7 @@ public class Spider : MonoBehaviour
     {
         if (!IsAIPathExist()) return;
         
-        spiderAIPath.maxSpeed = Random.Range(minimumSpeed, maximumSpeed);
+        spiderAIPath.speed = Random.Range(minimumSpeed, maximumSpeed);
     }
 
     private void OnDisable()

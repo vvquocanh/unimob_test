@@ -152,7 +152,7 @@ MonoBehaviour:
   - {fileID: 7450427658028049023}
   - {fileID: 6792201506370970476}
   - {fileID: 1874652859552277718}
-  spawningGapTime: 0.1
+  spawningGapTime: 0.05
   spiderInitNumber: 100
 --- !u!1001 &361715020484552527
 PrefabInstance:
