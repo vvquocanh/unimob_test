@@ -1,29 +1,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PoolingObject : MonoBehaviour
+public class PoolingObject<T> : MonoBehaviour where T : MonoBehaviour
 {
     #region Attribute
     private int initializeNumber = 0;
 
-    private GameObject objectPrefab = null;
+    private T objectPrefab = null;
 
-    private Queue<GameObject> objectQueue = new Queue<GameObject>();
+    private Queue<T> objectQueue = new Queue<T>();
+    
     #endregion
 
     #region Methods
 
-    public void InstantiateObject(int intializeNumber, GameObject objectPrefab)
+    public void InitializeObjects(int intializeNumber, T objectPrefab)
     {
         this.initializeNumber = intializeNumber;
         this.objectPrefab = objectPrefab;
 
-        if (IsOneOfThingNull(nameof(InstantiateObject))) return;
+        if (IsOneOfThingNull(nameof(InitializeObjects))) return;
         
         for (var i = 0; i < initializeNumber; i++)
         {
-            var gameObject = Instantiate(objectPrefab);
-            EnqueueGameObject(gameObject);
+            var gameObject = Instantiate(objectPrefab.gameObject);
+            EnqueueGameObject(gameObject.GetComponent<T>());
         }
     }
 
@@ -54,16 +55,16 @@ public class PoolingObject : MonoBehaviour
         return false;
     }
 
-    public GameObject GetGameObject()
+    public T GetGameObject()
     {
         if (IsOneOfThingNull(nameof(GetGameObject))) return null;
         
-        if (objectQueue.Peek()) return objectQueue.Dequeue();
+        if (objectQueue.Count > 0) return objectQueue.Dequeue();
 
         return Instantiate(objectPrefab);
     }
 
-    public void ReturnGameObject(GameObject gameObject)
+    public void ReturnGameObject(T gameObject)
     {
         if (IsQueueNull(nameof(ReturnGameObject))) return;
 
@@ -76,10 +77,10 @@ public class PoolingObject : MonoBehaviour
         EnqueueGameObject(gameObject);
     }
 
-    private void EnqueueGameObject(GameObject gameObject)
+    private void EnqueueGameObject(T gameObject)
     {
         objectQueue.Enqueue(gameObject);
-        gameObject.SetActive(false);
+        gameObject.gameObject.SetActive(false);
     }
     #endregion
 }

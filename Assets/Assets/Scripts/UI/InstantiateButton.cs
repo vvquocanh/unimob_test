@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Button))]
 public class InstantiateButton : MonoBehaviour
@@ -30,7 +30,7 @@ public class InstantiateButton : MonoBehaviour
     {
         if (displayText) displayText.SetText($"Create: {instantiateNumber}");
 
-        if (button != null) button.clicked += ButtonClick;
+        if (button != null) button.onClick.AddListener(ButtonClick);
     }
 
     #endregion
