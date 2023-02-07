@@ -1,9 +1,10 @@
 using System;
 using Pathfinding;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using Random = UnityEngine.Random;
 
-[RequireComponent(typeof(SpiderAIPath), typeof(AIDestinationSetter))]
+[RequireComponent(typeof(SpiderAIPath), typeof(AIDestinationSetter), typeof(SpiderAnimation))]
 public class Spider : MonoBehaviour
 {
     #region Attributes
@@ -17,6 +18,8 @@ public class Spider : MonoBehaviour
     private AIDestinationSetter aiDestinationSetter = null;
 
     private Action<Spider> onDestinationReached = null;
+
+    private SpiderAnimation spiderAnimation = null;
     #endregion
 
     #region Initialize
@@ -25,6 +28,7 @@ public class Spider : MonoBehaviour
     {
         spiderAIPath = GetComponent<SpiderAIPath>();
         aiDestinationSetter = GetComponent<AIDestinationSetter>();
+        spiderAnimation = GetComponent<SpiderAnimation>();
     }
 
     private void OnEnable()
@@ -37,6 +41,14 @@ public class Spider : MonoBehaviour
     private void OnDisable()
     {
         onDestinationReached = null;
+    }
+
+    private void Update()
+    {
+        if (!spiderAIPath || !spiderAnimation) return;
+
+        var velocity = spiderAIPath.velocity.normalized;
+        spiderAnimation.SetMovingDirection(velocity.x, velocity.y);
     }
 
     #endregion

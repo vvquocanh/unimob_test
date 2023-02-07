@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 1874291908}
   - component: {fileID: 4935316684331693178}
   - component: {fileID: 7126159321721036559}
+  - component: {fileID: 8188742997677081825}
+  - component: {fileID: 2997208186287367882}
   m_Layer: 0
   m_Name: Spider
   m_TagString: Untagged
@@ -77,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7f129aae725b71e4a9028445528ef159, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c9244b16f6f18a438f65acfbe480245, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -179,10 +181,51 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
-  slowdownDistance: 0.6
+  slowdownDistance: 0
   pickNextWaypointDist: 2
   endReachedDistance: 0.2
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!95 &8188742997677081825
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818063918174998783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 4b8dcf2b7ed52f14c9b1d6b5167fdc9a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &2997208186287367882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5818063918174998783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 527b13cb4a6a5b943ae379f2e2311a3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animatorList:
+  - {fileID: 22100000, guid: 4b8dcf2b7ed52f14c9b1d6b5167fdc9a, type: 2}
+  - {fileID: 22100000, guid: 2415cc443a4a4c5488373cb8c514dba8, type: 2}
+  - {fileID: 22100000, guid: 126878b9e036ace46ac97f20809d8753, type: 2}
+  - {fileID: 22100000, guid: a327d446cc79323498de2832fbe380f8, type: 2}
+  - {fileID: 22100000, guid: 619acb1f9cb0f8a49b9037a852c5a162, type: 2}
+  - {fileID: 22100000, guid: 634e9db2962c38f4ba8f5a10360919ce, type: 2}
+  - {fileID: 22100000, guid: e8f52fb5895783c429deb2c1e700a1c0, type: 2}
+  - {fileID: 22100000, guid: 9f4eaf86285bc614e96e724fdd7606cd, type: 2}
